@@ -116,6 +116,7 @@ onKeyUpSearch = () => {
             <span role="img" aria-label="Panda">➕ Add more guest</span>
           </a>
           <br/>
+          {/* Form pencarian by nama */}
           <form id="searchForm">
           <input type="text" className="form-control form-control-lg"
                   placeholder="Cari berdasarkan nama"
