@@ -80,6 +80,7 @@ onKeyUpSearch = () => {
     return (
       <div className="container-contact100" id="top">
         <div className="wrap-contact100">
+          {/* Form submit Guestbook */}
           <form className="contact100-form validate-form" ref="formAdd" onSubmit={this.onBtnAddClick}>
             <span className="contact100-form-title">
               Add Guest Book
