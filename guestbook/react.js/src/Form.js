@@ -10,6 +10,7 @@ class FormPage extends Component {
     this.showGuests();
   }
 
+  //Fungsi menampilkan list Guest
   showGuests = () => {
     axios.get('http://localhost:1988/getguests')
           .then((res) => {
@@ -23,6 +24,7 @@ class FormPage extends Component {
           })
   }
 
+  //Fungsi Add guest
   onBtnAddClick = (e) => {
     e.preventDefault();
     const nama = this.refs.addNama.value;
@@ -44,6 +46,7 @@ class FormPage extends Component {
     this.refs.addNama.focus();
   }
 
+  //Render map guestList
   renderGuestList = () => {
     var guestListJSX = this.state.searchGuestList.map((item, x) => {
       return(
@@ -59,6 +62,7 @@ class FormPage extends Component {
     return guestListJSX;
 }
 
+//Fungsi pencarian by nama
 onKeyUpSearch = () => {
   var nama = this.refs.qNama.value;
   var arrSearch;
