@@ -1,9 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-//import './index.css';
-// import '@fortawesome/fontawesome-free/css/all.min.css';
-// import 'bootstrap-css-only/css/bootstrap.min.css';
-// import 'mdbreact/dist/css/mdb.css';
 import './images/icons/favicon.ico';
 import './vendor/bootstrap/css/bootstrap.min.css';
 import './fonts/font-awesome-4.7.0/css/font-awesome.min.css';

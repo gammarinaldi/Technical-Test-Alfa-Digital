@@ -10,7 +10,7 @@ class FormPage extends Component {
     this.showGuests();
   }
 
-  //Fungsi menampilkan list Guest
+  //Showing Guest List
   showGuests = () => {
     axios.get('http://localhost:1988/getguests')
           .then((res) => {
@@ -24,7 +24,7 @@ class FormPage extends Component {
           })
   }
 
-  //Fungsi Add guest
+  //Add Guest
   onBtnAddClick = (e) => {
     e.preventDefault();
     const nama = this.refs.addNama.value;
@@ -46,7 +46,7 @@ class FormPage extends Component {
     this.refs.addNama.focus();
   }
 
-  //Render map guestList
+  //Rendering map guestList
   renderGuestList = () => {
     var guestListJSX = this.state.searchGuestList.map((item, x) => {
       return(
@@ -62,7 +62,7 @@ class FormPage extends Component {
     return guestListJSX;
 }
 
-//Fungsi pencarian by nama
+//Searching by nama
 onKeyUpSearch = () => {
   var nama = this.refs.qNama.value;
   var arrSearch;
@@ -117,14 +117,14 @@ onKeyUpSearch = () => {
             <span role="img" aria-label="Panda">➕ Add more guest</span>
           </a>
           <br/>
-          {/* Form pencarian by nama */}
+          {/* Form searching by nama */}
           <form id="searchForm">
           <input type="text" className="form-control form-control-lg"
                   placeholder="Cari berdasarkan nama"
                   ref="qNama" onKeyUp={() => {this.onKeyUpSearch()}} />
           </form>
           <br/>
-          {/* List Guest Book */}
+          {/* List of Guest Book */}
           <div className="table-responsive">
               <table className="table table-bordered table-hover">
                   <thead className="thead-dark">
